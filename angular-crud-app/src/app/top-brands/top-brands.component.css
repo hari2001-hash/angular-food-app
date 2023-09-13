@@ -1,0 +1,80 @@
+
+/* Top Brands */
+
+li{
+  display: inline-block;
+}
+
+ul{
+  display: flex;
+  margin-left: 10px;
+}
+
+.brands{
+  margin-top: 80px;
+  margin-left: 90px;
+}
+
+.anna{
+  margin-left: -15px;
+}
+
+.anna_img{
+  border-radius: 50%;
+}
+
+.KFC{
+  margin-left: 40px;
+  margin-top: 25px;
+}
+.HB{
+  margin-left: 20px;
+  margin-top: -1px;
+}
+
+.ht{
+  margin-left: 30px;
+}
+.bk{
+  margin-left: 35px;
+  margin-top: -15px;
+}
+
+
+
+
+
+
+
+.outer{
+  width: 100%;
+  overflow: auto;
+  margin-left: 100px;
+  display: inline-flex;
+}
+.dish{
+  text-align: center;
+}
+
+.imgsty{
+  float: left;
+  max-width: 100px;
+  background-size: cover;
+
+}
+
+
+.roundedBack{
+  border-radius: 100%;
+}
+
+
+.margin{
+  margin-left: 50px;
+}
+
+
+
+h3{
+  margin-top: 20px;
+}

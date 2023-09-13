@@ -1,0 +1,324 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "restaurants": [
+    {
+      "id": 1,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/2/19845882/86991ee26e68297bb23b42ac86f9d378_featured_v2.jpg?output-format=webp",
+      "hotelName": "SS Hyderabad Biriyani",
+      "rating": "4.4",
+      "cost": 300,
+      "cookTime": "10-20",
+      "cuisine": "Biriyani, Chinese,Mughlal",
+      "location": "Gandhipuram"
+    },
+    {
+      "id": 2,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/chains/3/3000293/a67239e7f0a96f17e2b376ddf1c52b62_o2_featured_v2.jpg?output-format=webp",
+      "hotelName": "Sree Annapoorna",
+      "rating": "4.4",
+      "cost": 130,
+      "cuisine": "south Indian, chinese",
+      "location": "Gandhipuram",
+      "cookTime": "20-30"
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/7/20329197/7e0861efc40ab8c2296852ff59037bb3_o2_featured_v2.jpg",
+      "hotelName": "Nagarkovil Arya Bhavan",
+      "rating": "4.1",
+      "cost": 240,
+      "cuisine": "Biriyani, Chinese,Mughlal",
+      "location": "Gandhipuram",
+      "cookTime": "10-15"
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/4/3000044/8a05f2519717c9c1da2bd757caa51e8b_o2_featured_v2.jpg",
+      "hotelName": "MsDonald's",
+      "rating": "3.2",
+      "cost": 150,
+      "cuisine": "Pizza, Fast Food",
+      "location": "Gandhipuram",
+      "cookTime": "10-20"
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/chains/9/3000389/385b3b6ebb1e16a08bcd4644fbc801e7_o2_featured_v2.jpg",
+      "hotelName": "KFC",
+      "rating": "3.9",
+      "cost": 300,
+      "cuisine": "Burger, Fast Food",
+      "location": "Gandhipuram",
+      "cookTime": "10-20"
+    },
+    {
+      "id": 6,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/chains/9/19364129/7cc72af81e01411f316a75924ca2dfcc_o2_featured_v2.jpeg",
+      "hotelName": "SS Hyderabad Biriyani",
+      "rating": "4.3",
+      "cost": 300,
+      "cookTime": "10-20",
+      "cuisine": "Biriyani, Chinese,Mughlal",
+      "location": "Gandhipuram"
+    },
+    {
+      "id": 7,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/1/19630211/1a4cefbfa21b2d60068a44f959acca3c_o2_featured_v2.jpg",
+      "hotelName": "SS Hyderabad Biriyani",
+      "rating": "4.3",
+      "cost": 300,
+      "cookTime": "10-20",
+      "cuisine": "Biriyani, Chinese,Mughlal",
+      "location": "Gandhipuram"
+    },
+    {
+      "id": 8,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/6/18823746/e51da611c4698f7262cbe4baa0e128a9_o2_featured_v2.jpg",
+      "hotelName": "SS Hyderabad Biriyani",
+      "rating": "4.3",
+      "cost": 300,
+      "cookTime": "10-20",
+      "cuisine": "Biriyani, Chinese,Mughlal",
+      "location": "Gandhipuram"
+    },
+    {
+      "id": 9,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/chains/2/18910232/91df936945f581b96542f2f020a7d6a0_o2_featured_v2.png",
+      "hotelName": "SS Hotel",
+      "rating": "2.3",
+      "cost": "300",
+      "cookTime": "10-15",
+      "cuisine": "Chinese",
+      "location": "Ganghinagar Coimbatore"
+    },
+    {
+      "id": 10,
+      "imgUrl": "https://b.zmtcdn.com/data/pictures/chains/9/19364129/7cc72af81e01411f316a75924ca2dfcc_o2_featured_v2.jpeg",
+      "hotelName": "SS Hyderabad Biriyani",
+      "rating": "3.8",
+      "cost": "340",
+      "cookTime": "10-15",
+      "cuisine": "south Indian",
+      "location": "ramanathapuram, Coimbatore"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Brinn",
+      "lastName": "Jephcote",
+      "email": "bjephcote0@archive.org",
+      "dob": "1981-10-05T12:09:39Z",
+      "gender": "Female",
+      "education": "Graduate",
+      "company": "Gabspot",
+      "experience": 36,
+      "package": 37
+    },
+    {
+      "id": 2,
+      "firstName": "Kenneth",
+      "lastName": "MacElholm",
+      "email": "kmacelholm1@sina.com.cn",
+      "dob": "1991-09-12T22:14:02Z",
+      "gender": "Male",
+      "education": "Matric",
+      "company": "Agivu",
+      "experience": 75,
+      "package": 17
+    },
+    {
+      "id": 3,
+      "firstName": "Kimmy",
+      "lastName": "Penniall",
+      "email": "kpenniall2@biblegateway.com",
+      "dob": "1980-05-19T08:23:30Z",
+      "gender": "Female",
+      "education": "Graduate",
+      "company": "Mycat",
+      "experience": 45,
+      "package": 17
+    }
+  ],
+  "SreeAnnapoorna": [
+    {
+      "dishName": "Poori",
+      "dishImg": "https://b.zmtcdn.com/data/pictures/chains/2/3000112/1c32084e6a59ee427d27331055479ec5_o2_featured_v2.jpg?output-format=webp",
+      "dishQuantity": "230",
+      "unitcost": 35,
+      "id": 1
+    },
+    {
+      "dishName": "Idly",
+      "dishImg": "https://t3.ftcdn.net/jpg/03/62/02/26/240_F_362022640_fZ6UM0JycJlFDdBiR1pYlNddKfdGvYwR.jpg",
+      "dishQuantity": "230",
+      "unitcost": 45,
+      "id": 2
+    },
+    {
+      "dishName": "Pongal",
+      "dishImg": "https://t3.ftcdn.net/jpg/04/09/19/10/240_F_409191045_hKZVAPBdUXGuuKhbmi2DbbEktKIY33yb.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 3
+    },
+    {
+      "dishName": "Ulundhu Vadai",
+      "dishImg": "https://t3.ftcdn.net/jpg/03/22/27/44/240_F_322274449_KKg6xTeBNHn08z4im9FApuXxlnyu5ZFG.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 4
+    },
+    {
+      "dishName": "Plain Roast",
+      "dishImg": "https://t3.ftcdn.net/jpg/03/21/94/18/240_F_321941897_1IemuLDDsuBlNyK3nCy8DpHgW3DKJu2B.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 5
+    },
+    {
+      "dishName": "Uthappam",
+      "dishImg": "https://t4.ftcdn.net/jpg/03/06/02/09/240_F_306020971_imerrGBhtWaamiAdhRAeQw9VvS0GJior.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 6
+    },
+    {
+      "dishName": "Coffee",
+      "dishImg": "https://t4.ftcdn.net/jpg/01/16/61/93/240_F_116619399_YA611bKNOW35ffK0OiyuaOcjAgXgKBui.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 7
+    },
+    {
+      "dishName": "Chocolate Milkshake",
+      "dishImg": "https://t3.ftcdn.net/jpg/02/12/20/88/240_F_212208812_sNS7DNxazmNtDm2mwOqhdf9eGABaM285.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 8
+    },
+    {
+      "dishName": "Veg Sevai",
+      "dishImg": "https://t3.ftcdn.net/jpg/05/54/93/34/240_F_554933403_yg40k2SaEINEZXSO0mgG0GFiUfyRUQfG.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 9
+    },
+    {
+      "hotelName": "Sree Annapoorna",
+      "dishName": "trsfdg",
+      "dishImg": "gdfg",
+      "dishQuantity": 4545,
+      "unitcost": 243
+    },
+    {
+      "hotelName": "Sree Annapoorna",
+      "dishName": "dfj",
+      "dishImg": "jtyj",
+      "dishQuantity": 6645,
+      "unitcost": 56,
+      "id": 10
+    },
+    {
+      "hotelName": "Sree Annapoorna",
+      "dishName": "rava idly",
+      "dishImg": "https://as1.ftcdn.net/v2/jpg/03/97/00/80/1000_F_397008083_UH8dClw4HcXPU4PrlrHCgSocRrTZ0sBK.jpg",
+      "dishQuantity": 350,
+      "unitcost": 24,
+      "id": 11
+    }
+  ],
+  "RHR": [
+    {
+      "dishName": "Poori",
+      "dishImg": "https://b.zmtcdn.com/data/pictures/chains/2/3000112/1c32084e6a59ee427d27331055479ec5_o2_featured_v2.jpg?output-format=webp",
+      "dishQuantity": "230",
+      "unitcost": 35,
+      "id": 1
+    },
+    {
+      "dishName": "Idly",
+      "dishImg": "https://t3.ftcdn.net/jpg/03/62/02/26/240_F_362022640_fZ6UM0JycJlFDdBiR1pYlNddKfdGvYwR.jpg",
+      "dishQuantity": "230",
+      "unitcost": 45,
+      "id": 2
+    },
+    {
+      "dishName": "Pongal",
+      "dishImg": "https://t3.ftcdn.net/jpg/04/09/19/10/240_F_409191045_hKZVAPBdUXGuuKhbmi2DbbEktKIY33yb.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 3
+    },
+    {
+      "dishName": "Ulundhu Vadai",
+      "dishImg": "https://t3.ftcdn.net/jpg/03/22/27/44/240_F_322274449_KKg6xTeBNHn08z4im9FApuXxlnyu5ZFG.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 4
+    },
+    {
+      "dishName": "Plain Roast",
+      "dishImg": "https://t3.ftcdn.net/jpg/03/21/94/18/240_F_321941897_1IemuLDDsuBlNyK3nCy8DpHgW3DKJu2B.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 5
+    },
+    {
+      "dishName": "Uthappam",
+      "dishImg": "https://t4.ftcdn.net/jpg/03/06/02/09/240_F_306020971_imerrGBhtWaamiAdhRAeQw9VvS0GJior.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 6
+    },
+    {
+      "dishName": "Coffee",
+      "dishImg": "https://t4.ftcdn.net/jpg/01/16/61/93/240_F_116619399_YA611bKNOW35ffK0OiyuaOcjAgXgKBui.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 7
+    },
+    {
+      "dishName": "Chocolate Milkshake",
+      "dishImg": "https://t3.ftcdn.net/jpg/02/12/20/88/240_F_212208812_sNS7DNxazmNtDm2mwOqhdf9eGABaM285.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 8
+    },
+    {
+      "dishName": "Veg Sevai",
+      "dishImg": "https://t3.ftcdn.net/jpg/05/54/93/34/240_F_554933403_yg40k2SaEINEZXSO0mgG0GFiUfyRUQfG.jpg",
+      "dishQuantity": "230",
+      "unitcost": 40,
+      "id": 9
+    }
+  ],
+  "SSHyderabadBiriyani": [],
+  "MsDonald's": [],
+  "KFC": [
+    {
+      "hotelName": "KFC",
+      "dishName": "fried chicked",
+      "dishImg": "https://t3.ftcdn.net/jpg/02/36/94/88/240_F_236948807_aDHu2bfA4yQG7VtgDs8grwLiIhqmXtEy.jpg",
+      "dishQuantity": 2400,
+      "unitcost": 250,
+      "id": 1
+    }
+  ]
+}

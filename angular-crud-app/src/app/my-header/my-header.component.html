@@ -1,0 +1,30 @@
+<p>my-header works!</p>
+
+
+<div class="navba">
+  <div class="logo" (click)="goToHome()">zwimato
+  </div>
+  <div class="search">
+    <input type="text" placeholder="Search for restaurant or food">
+  <button type="submit">Search</button>
+  </div>
+  <div *ngIf="isLoggedin">
+    <h3>Hello {{userName}}</h3>
+  </div >
+  <div *ngIf="!isLoggedin" class="login"><img src="\assets\resources\user.png" width="18%">
+    <a routerLink="login">Login</a></div>
+    <div *ngIf="isLoggedin" class="login"><img src="\assets\resources\user.png" width="18%">
+      <a routerLink="login" (click)="emptyUname()" (click)="logout()">Logout</a></div>
+  <div class="cart">
+    <img  src="\assets\resources\trolley-cart.png" width="18%">
+    <a routerLink="cart">Cart{{cartCount}}</a></div>
+    <div class="history">
+      <img src="\assets\resources\history1.png" width="18%">
+      <a routerLink="success">success</a>
+    </div>
+</div>
+
+
+
+
+<p>my-header works!</p>

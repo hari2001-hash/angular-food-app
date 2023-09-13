@@ -1,0 +1,99 @@
+<p>admin works!</p>
+
+<mat-toolbar color="primary">
+  <span>Admin Page</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button (click)="openAddEditEmpForm()">
+    ADD HOTELS
+  </button>
+</mat-toolbar>
+
+
+<div class="discount">
+  <h3>set Discount</h3>
+  <button mat-raised-button (click)="setDiscount()">Discount</button>
+</div>
+
+
+<div class="main-body">
+
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+  </mat-form-field>
+
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+
+      <!-- Progress Column -->
+      <ng-container matColumnDef="imgUrl">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> image URL </th>
+        <td mat-cell *matCellDef="let row" maxlength=10> {{row.imgUrl|slice:8:20}}</td>
+      </ng-container>
+      <ng-container matColumnDef="hotelName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Hotel Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.hotelName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rating </th>
+        <td mat-cell *matCellDef="let row"> {{row.rating}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cost">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cost </th>
+        <td mat-cell *matCellDef="let row"> {{row.cost | currency:'INR'}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cuisine">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> cuisine </th>
+        <td mat-cell *matCellDef="let row"> {{row.cuisine}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> location </th>
+        <td mat-cell *matCellDef="let row"> {{row.location}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cookTime">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> cook Time </th>
+        <td mat-cell *matCellDef="let row"> {{row.cookTime}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary" (click)="openEditForm(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteEmployee(row.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</div>
+
+<button mat-raised-button type="submit" (click)="AddFoods()">
+Add Foods
+</button>
+
+
+

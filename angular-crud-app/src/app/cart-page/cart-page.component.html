@@ -1,0 +1,57 @@
+
+ <h1>cart page works</h1>
+<app-not-found [visible]="!cart || cart.items.length<=0" notFoundMessage="Cart Page Is Empty!"
+resetLinkText="Go To HomePage">
+</app-not-found>
+<div *ngIf="cart && cart.items.length>0" class="container">
+
+
+<ul>
+  <li *ngFor="let cartItem of cart.items">
+    <div>
+      <img [src]="cartItem.food.dishImg" [alt]="">
+    </div>
+    <div>
+      <a routerLink="/food/{{cartItem.food.id}}">
+        {{cartItem.food.dishName}}
+      </a>
+    </div>
+    <div>
+
+      {{cartItem.quantity}}
+
+    </div>
+    <div class="btns">
+      <!-- {{cartItem.quantity}} -->
+
+      <img src="\assets\resources\plus.png" (click)="incrementCount(cartItem.food.id)" class="plus" style="width: 30px;height: 30px;">
+      <img src="\assets\resources\decrement.png" (click)="decrementCount(cartItem.food.id)" class="minus"  style="width: 30px;height: 30px;">
+    </div>
+    <div *ngIf="(days>0 || days==0) && hours>0 && minutes>0 && seconds>0" class="offer">
+      {{cartItem.price | currency:'INR'}}
+    </div>
+    <p *ngIf="days>0 ||days==0 && hours>0 && minutes>0 && seconds>0"> {{(cartItem.price *descPercent/100)|currency:"INR"}}</p>
+    <p *ngIf="days<0 && minutes<0 && seconds<0">{{cartItem.price|currency:"INR"}}</p>
+      <div>
+      <button class="remove-button" (click)="removeFromCart(cartItem)">Remove</button>
+    </div>
+  </li>
+</ul>
+
+<div class="checkout">
+  <div>
+    <div class="foods-count">{{cart.items.length}}</div>
+    <div *ngIf="(days>0 ||days==0) && hours>0 && minutes>0 && seconds>0" class="total-price offer">{{cart.totalPrice | currency:'INR'}}</div>
+    <div *ngIf="(days>0 ||days==0) && hours>0 && minutes>0 && seconds>0" class="total-price ">{{(cart.totalPrice *descPercent/100) | currency:'INR'}}</div>
+
+    <div *ngIf=" hours<0 && minutes<0 && seconds<0" class="total-price ">{{cart.totalPrice | currency:'INR'}}</div>
+      <br>
+      <button class="check" (click)="payNow(cart.totalPrice,cart.items)">Checkout</button>
+
+  </div>
+
+</div>
+
+
+</div>
+

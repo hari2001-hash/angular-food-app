@@ -1,0 +1,70 @@
+<div mat-dialog-title>
+    <h1>Restaurant Form</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Image URL</mat-label>
+                <input matInput type="text" placeholder="https://t3.ftcdn.net/jpg/03.jpg" formControlName="imgUrl">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Hotel Name</mat-label>
+                <input matInput placeholder="Anna Poorna" formControlName="hotelName">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Rating</mat-label>
+                <input matInput type="email" placeholder="out of 5" formControlName="rating">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>cost</mat-label>
+                <input matInput formControlName="cost">
+                <mat-hint>in rupees</mat-hint>
+                <!-- <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle> -->
+                <!-- <mat-datepicker #picker></mat-datepicker> -->
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-radio-group aria-label="Select an option" formControlName="cookTime" ngDefaultControl>
+                <mat-label><b>Cook Time</b></mat-label>
+                <mat-radio-button value="5-10">10-15</mat-radio-button>
+                <mat-radio-button value="10-15">15-20</mat-radio-button>
+                <mat-radio-button value="20-30">20-30</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>cuisine</mat-label>
+                <mat-select formControlName="cuisine" ngDefaultControl>
+                    <mat-option *ngFor="let val of cuisine" [value]="val">{{val}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>location</mat-label>
+                <input matInput placeholder="coimbatore, Ram nagar" formControlName="location">
+            </mat-form-field>
+        </div>
+        <!-- <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Experience</mat-label>
+                <input matInput placeholder="Ex. 4" type="number" formControlName="experience">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Package</mat-label>
+                <input matInput placeholder="Ex. 12" type="number" formControlName="package">
+                <mat-hint>In rupees</mat-hint>
+            </mat-form-field>
+        </div> -->
+    </div>
+
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Update': 'Save'}}</button>
+    </div>
+</form>

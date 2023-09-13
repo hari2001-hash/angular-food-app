@@ -1,0 +1,95 @@
+<p>hotel-page works!</p>
+
+
+
+<p>hotel-page works!</p>
+<app-search></app-search>
+<div>
+
+
+  <div *ngIf="days>0 || days==0">
+    <app-discount-countdown></app-discount-countdown>
+  </div>
+</div><h1>{{toTheHeader}}</h1>
+<div class="card-container">
+  <div *ngFor="let hotel of hotelfood" class="card-item">
+    <a routerLink="/hotel/{{hotel.id}}"></a>
+    <div  class="card-image">
+      <img [src]="hotel.dishImg" alt="" class="dishImg">
+    </div>
+    <div class="card-content">
+      <h1>{{hotel.dishName}}</h1>
+      <p *ngIf="days>0||days==0 && hours>0 && minutes>0 && seconds>0" class="offer">{{hotel.unitcost|currency:"INR"}}</p>
+      <p *ngIf="days>0 ||days==0 && hours>0 && minutes>0 && seconds>0"> {{(hotel.unitcost *descPercent/100)|currency:"INR"}}</p>
+      <p *ngIf="days<0 && hours<0 && minutes<0 && seconds<0">{{hotel.unitcost|currency:"INR"}}</p>
+      <div class="right">
+        <button (click)="addToCart(hotel.id)">Add to Cart</button>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+<!-- 11-06-23 -->
+<!-- {{dataHotel|json}}
+
+<h1>{{toTheHeader}}</h1>
+<div class="card-container">
+  <div *ngFor="let hotel of dataHotel" class="card-item">
+    <div  class="card-image">
+      <img [src]="hotel.dishImg" alt="" class="dishImg">
+    </div>
+    <div class="card-content">
+      <h1>{{hotel.dishName}}</h1>
+      <p>{{hotel.unitcost|currency:"INR"}}</p>
+      <div class="right">
+        <button (click)="addToCart()">Add to Cart</button>
+      </div>
+
+      <div class="count">
+        {{count}}
+      </div>
+    </div>
+
+  </div>
+
+</div> -->
+<!-- 11-06-23 -->
+
+
+
+<!-- <ul>
+  <li *ngFor="let food of dataHotel">
+    <a>
+      <img src="{{food.dishImg}}" alt="">
+      <div class="content"></div>
+      <div class="name">
+        {{food.dishName}}
+      </div>
+      <span class="favorite {{food.favorite?'':'not'}}">❤</span>
+      <div class="product-item-footer">
+        <div class="origins">
+          <span *ngFor="let origin of food.origins">
+            {{origin}}
+          </span>
+        </div>
+        <div class="cook-time">
+          <span>🕒</span>
+          {{food.cookTime}}
+        </div>
+      </div>
+      <div class="price">
+        <span>{{food.price|currency:'INR'}}</span>
+      </div>
+    </a>
+  </li>
+</ul> -->
+
+
+
+
+
+{{hotelfood}}
+<router-outlet></router-outlet>

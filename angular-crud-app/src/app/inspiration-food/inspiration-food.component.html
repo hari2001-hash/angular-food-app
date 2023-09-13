@@ -1,0 +1,31 @@
+<p>inspiration-food works!</p>
+
+
+
+<!-- <app-discount-countdown></app-discount-countdown> -->
+
+
+
+<div class="inspiration">
+  <h2>Inspiration for your first order</h2>
+
+  <!-- <ul>
+    <li *ngFor="let image of imgUrlArr">
+      <img [src]="image.imageUrl" width="50%">
+      <h3 class="dish">{{image.item}}</h3>
+    </li>
+
+
+  </ul> -->
+</div>
+
+
+<div class="outer">
+  <div *ngFor="let image of imgUrlArr">
+    <img [src]="image.imageUrl" width="50%">
+    <h3 class="dish">{{image.item}}</h3>
+  </div>
+</div>
+<app-top-brands></app-top-brands>
+
+<app-best-foods></app-best-foods>

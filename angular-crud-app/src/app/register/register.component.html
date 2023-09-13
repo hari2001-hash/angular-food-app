@@ -1,0 +1,86 @@
+
+
+<div class="container">
+  <div class="title">Sign up</div>
+  <div class="content">
+    <form [formGroup]="registerForms" (ngSubmit)="fetchData()">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" placeholder="Enter your name"  formControlName="fname"  required minlength="3" pattern="^[a-zA-Z0-9_]{4,16}$">
+          <div *ngIf="registerForms.controls['fname'].invalid || registerForms.controls['fname'].touched">
+            <small *ngIf="registerForms.controls['fname'].errors?.['required']">Enter the username</small>
+            <small *ngIf="registerForms.controls['fname'].errors?.['minlength']">username must be atleast of 3 char length</small>
+            <span *ngIf="registerForms.controls['fname'].dirty && registerForms.hasError('pattern','fname')" style="color: red;">Please enter characters only</span>
+
+            </div>
+          <!-- <small *ngIf="!inp1.pattern">Enter a valid name</small> -->
+          <!-- <p>{{inp1.value.length}}</p> -->
+        </div>
+        <div class="input-box">
+          <span class="details">Username</span >
+          <input type="text" placeholder="Enter your username"  formControlName="uname" required minlength="3" id="userName">
+          <div *ngIf="registerForms.controls['uname'].invalid || registerForms.controls['uname'].touched">
+            <small *ngIf="registerForms.controls['uname'].errors?.['required']">Enter the username</small>
+            <small *ngIf="registerForms.controls['uname'].errors?.['minlength']">username must be atleast of 3 char length</small>
+
+            </div>
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input #email type="email" placeholder="Enter your email" formControlName="email" email="true" required id="email">
+          <!-- <small *ngIf="registerForms.controls['email'].errors?.['pattern']" style="color: red;">Please, Enter 10 digit Mobile Number.</small> -->
+          <span *ngIf="registerForms.controls['email'].dirty && registerForms.hasError('required','email')">Email is required</span>
+          <span *ngIf="registerForms.controls['email'].dirty && registerForms.hasError('pattern','email')" style="color: red;">email is invalid</span>
+
+        </div>
+        <div class="input-box">
+          <span class="details">Phone Number</span>
+          <input type="text" placeholder="Enter your number"  formControlName="phoneNum" required #phoneNum id="phoneNumber">
+          <span *ngIf="registerForms.controls['phoneNum'].dirty && registerForms.hasError('required','phoneNum')">Phone number is required</span>
+          <span *ngIf="registerForms.controls['phoneNum'].dirty && registerForms.hasError('pattern','phoneNum')" style="color: red;">phone number is invalid</span>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="password" placeholder="Enter your password"  formControlName="password" >
+
+          <!-- <small *ngIf="registerForms.controls['password'].errors && (registerForms.controls['password'].dirty || registerForms.controls['password'].touched)">
+            <small [hidden]="!registerForms.controls['password'].errors['required']" style="color: red;">enter password</small>
+          </small> -->
+          <small *ngIf="registerForms.controls['password'].touched && registerForms.controls['password'].invalid" style="color: red;">
+            <small *ngIf="registerForms.controls['password'].errors?.['required']">Password is required.</small>
+          </small>
+
+        </div>
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="password" placeholder="Confirm your password"  formControlName="conPass">
+        </div>
+        <small *ngIf="registerForms.controls['conPass'].touched && registerForms.controls['conPass'].invalid" class="red">
+          <small *ngIf="registerForms.controls['conPass'].errors?.['required']">Password is required.</small>
+          <small *ngIf="registerForms.controls['conPass'].errors?.['confirmedValidator']">Password and Confirm Password must be match.</small>
+          </small>
+
+        <div class="input-box">
+          <span class="details">Address line 1</span>
+          <input type="text" placeholder="Door no/flat no,Area"  formControlName="address1">
+        </div>
+
+        <div class="input-box">
+          <span class="details">Address line 2 </span>
+          <input type="text" placeholder="street,city,pincode"  formControlName="address2">
+        </div>
+      </div>
+
+
+      <div class="button">
+
+        <input [disabled]="registerForms.invalid" type="submit" value="Register">
+      </div>
+    </form>
+  </div>
+  </div>
+
+  <!-- <button (click)="fetchData()">get Data</button> -->
+<router-outlet></router-outlet>

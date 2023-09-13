@@ -1,0 +1,260 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 1.5rem;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+  justify-content: space-evenly;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  list-style-type: none;
+  margin: .5rem;
+  padding: 0;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e4e4e4;
+
+}
+
+ul li:last-child{
+  border: none;
+}
+
+
+ul li img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+
+
+ul li div{
+  padding: 1rem;
+}
+
+ul li div:not(:first-child){
+  flex-basis: 18%;
+}
+
+ul li select{
+  width: 3rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+ul .remove-button{
+  border-radius: 1rem;
+  border: none;
+  padding: .5rem;
+  color: #e72929;
+  opacity: .7;
+  outline: none;
+}
+ul .remove-button:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.checkout{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex:1 3;
+  height:20rem;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  padding: .5rem;
+  margin: .5rem;
+}
+
+
+.checkout>div{
+  font-size: 1.4rem;
+  margin: 1rem;
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.checkout .foods-count{
+  margin-bottom: 1.5rem;
+}
+
+.checkout .foods-count::before{
+  content: 'Count: ';
+  color: grey;
+}
+
+.checkout .total-price::before{
+  content: 'Price: ';
+  color: grey;
+}
+
+.offer{
+  text-decoration: line-through;
+}
+
+.check{
+  border-radius: 5px;
+  background-color: #e72929;
+  opacity: .8;
+  color: white;
+}
+div button:hover{
+  opacity: 0.6;
+  cursor: pointer;
+
+}
+
+
+
+
+
+
+
+.card-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 60px;
+}
+
+.card-item {
+  flex-basis: calc(23.33% - 20px);
+  background-color: azure;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 330px;
+  margin-left: 70px;
+  position: relative;
+
+
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+}
+
+.card-content {
+
+  margin: 10px;
+}
+
+.card-content h1 {
+  margin-top: 0;
+}
+
+.card-content p {
+  margin-top: 5px;
+  font-size: x-large;
+
+}
+
+@media (max-width: 768px) {
+  .card-item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-item {
+    flex-basis: 100%;
+  }
+}
+
+
+
+
+
+.decre{
+  position: absolute;
+  display: flex;
+  top: 40%;
+  right: 0;
+  margin-left: 250px;
+  margin-top: 10px;
+}
+
+.count{
+  top: 50%;
+  margin-left: 255px;
+  margin-top: -50px;
+}
+
+
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.time-unit {
+  text-align: center;
+}
+
+.time-unit span {
+  display: block;
+  padding: 0.5rem;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  margin: 0.3rem;
+}
+
+.time-unit .unit {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+
+.card-content .offer{
+  text-decoration: line-through;
+}
+
+
+
+
+
+
+
+.buttons{
+  display: flex;
+  margin-left: 100px;
+  margin-top: -20px;
+  width: 100px;
+}
+
+
+
+
+.btns{
+  display: flex;
+}
+
+
+.minus{
+  margin-left: 7px;
+
+}

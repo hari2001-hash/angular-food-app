@@ -1,0 +1,37 @@
+<h2>Order summary</h2>
+      <div class="table-container">
+        <table >
+          <thead>
+            <tr>
+              <!-- {
+                "itemArr": [
+                  "Idly"
+                ],
+                "quantityArr": [
+                  1
+                ],
+                "totalPrice": 45,
+                "paymentStatus": true
+              } -->
+              <th>order items</th>
+              <th>quantity</th>
+              <th>total price</th>
+              <th>payment status</th>
+              <th>action</th>
+
+              <!-- <th>action</th> -->
+
+            </tr>
+          </thead>
+          <tbody *ngFor="let items of userData.userOrder">
+            <tr>
+              <td>{{items.itemArr}}</td>
+              <td>{{items.quantityArr}}</td>
+              <td>{{items.totalPrice}}</td>
+              <td>{{items.paymentStatus}}</td>
+              <td><button (click)="cancelOrder()">cancel order</button></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>

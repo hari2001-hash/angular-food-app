@@ -1,0 +1,92 @@
+
+<h1>payment works</h1>
+<h2 class="payment-heading">Payment Details</h2>
+    <div class="app">
+      <div class="nav flex" >
+        <button *ngFor="let tab of tabTitles" (click)="tg.dropOpen(tab)">
+          <!-- {{ tab }} -->
+          <img src="\assets\resources\{{tab}}.png">
+          <p>{{tab}}</p>
+        </button>
+      </div>
+
+      <div class="tab-view" *ngIf="tg.getValue('cash-on-delivery')">
+        <button class="cashOnDl" (click)="goToSuccess()">Pay{{totalCost|currency :'INR'}}</button>
+      </div>
+
+      <div class="tab-view" *ngIf="tg.getValue('UPI')">
+        <button (click)="callRazor(totalCost)" class="upi">Pay through Razor pay</button>
+      </div>
+
+      <div class="tab-view" *ngIf="tg.getValue('card-payment')">
+        <div class="nav flex">
+          <form [formGroup]="paymentForms" (ngSubmit)="processPayment()" class="payment-form">
+            <div class="form-group">
+              <label for="cardNumber">Card Number:</label>
+              <input type="text" id="cardNumber" formControlName="cardNumber" required class="form-control" minlength="15" maxlength="16" pattern="/^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$/;              ">
+              <small *ngIf="paymentForms.controls['cardNumber'].errors?.['required']">Enter a valid card number</small>
+              <small *ngIf="paymentForms.controls['cardNumber'].errors?.['minlength']">card number must have minimum of 16 digits</small>
+              <small *ngIf="paymentForms.controls['cardNumber'].errors?.['pattern']" style="color: red;">Please, Enter a valid Credit card number.</small>
+
+
+
+            </div>
+
+            <div class="form-group">
+              <label for="expirationDate">Expiration Date:</label>
+              <input type="text" id="expirationDate" formControlName="expirationDate" required class="form-control" placeholder="mm/yyyy" pattern="(0?[1-9]|1[0-2])\/(\d{4})">
+              <small *ngIf="paymentForms.controls['expirationDate'].errors?.['pattern']" style="color: red;">Enter ExpirationDate in mm/yyyy format</small>
+
+            </div>
+
+            <div class="form-group">
+              <label for="cvv">CVV:</label>
+              <input type="text" id="cvv" formControlName="cvv" required class="form-control" pattern="/^[0-9]+$/">
+              <small *ngIf="paymentForms.controls['cvv'].errors?.['pattern']" style="color: red;">CVV must have 3 or 4 digit numbers</small>
+
+            </div>
+
+            <div class="form-group">
+              <label for="amount">Amount:</label>
+              <input type="number" id="amount" [(ngModel)]="amount" required class="form-control" [value]="totalCost" readonly="readonly">
+
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="goToSuccess()">Pay Now</button>
+
+          </form>
+
+        </div>
+      </div>
+
+
+
+      <h2>Order summary</h2>
+      <div class="table-container">
+        <table >
+          <thead>
+            <tr>
+              <th>dish image</th>
+              <th>dish name</th>
+              <th>quantity</th>
+              <th>unit cost</th>
+              <th>total</th>
+
+            </tr>
+          </thead>
+          <tbody *ngFor="let items of cartItems">
+            <tr>
+              <td><img [src]="items.food.dishImg" class="itemImg"></td>
+              <td>{{items.food.dishName}}</td>
+              <td>{{items.quantity}}</td>
+              <td>{{items.food.unitcost}}</td>
+              <td>{{totalCost}}</td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <a routerLink="./tests">Test</a>

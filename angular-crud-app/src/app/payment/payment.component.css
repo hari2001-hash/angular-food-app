@@ -1,0 +1,237 @@
+
+/* .inner-container {
+  overflow-y: scroll;
+  padding: auto 200px;
+  text-align: center;
+  background-color: white;
+  height: 550px;
+  width: 58.2%;
+  text-align: center;
+}
+
+.logo {
+  width: 30px;
+  margin-top: -10px;
+}
+
+.copyright {
+  color: #54B435;
+  font-weight: lighter;
+}
+
+.title {
+  margin: 50px auto 10px;
+  margin-top: -20px;
+}
+
+.title img {
+  width: 20%;
+  margin-top: -10px;
+  margin-left: -50px;
+}
+
+.title span {
+  margin-left: -10px;
+  font-size: larger;
+  color: #54B435;
+  font-weight: bolder;
+}
+
+label, .cards span {
+  color: #54B435;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.cards button {
+  border: 2px solid white;
+  width: 30%;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.cards span {
+  color: salmon;
+}
+
+::placeholder {
+  color: lightgrey;
+}
+
+button {
+  font-weight: bold;
+} */
+
+
+
+
+
+
+
+.payment-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  /* background-color: #007bff; */
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+
+.payModes{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+* {
+  font-family: monospace;
+}
+
+app {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav {
+  padding: 10px;
+  background-color: aliceblue;
+}
+
+button {
+  padding: 8px;
+  background-color: #ff5555;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffaaaa;
+}
+
+.tab-view {
+  padding: 20px;
+}
+
+.companies > div {
+  margin: 4px 0px;
+  justify-content: space-between;
+}
+
+.companies > div > div::first-letter {
+  color: #ff5555;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.companies button {
+  width: 44px;
+  height: 44px;
+}
+
+
+
+
+div div button img{
+  width: 100px;
+  height: 100px;
+}
+
+
+.cashOnDl{
+  margin-left: 320px;
+}
+
+.upi{
+  margin-left: 615px;
+}
+
+.table-container {
+  margin-left: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+thead {display: table-row-group;}
+
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    display: inline-block;
+  }
+}
+
+
+
+
+
+
+
+
+.itemImg{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100rem;
+  object-fit: cover;}

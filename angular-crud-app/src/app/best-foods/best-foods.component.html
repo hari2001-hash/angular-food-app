@@ -1,0 +1,58 @@
+<p>best-foods works!</p>
+<br><br>
+<app-search></app-search>
+
+<div class="image-container" >
+  <div class="image-item" *ngFor="let content of foods" (click)="clickMessage(content.hotelName)">
+    <a routerLink="/food/{{content.id}}">
+    <img [src]="content.imgUrl" alt="Image 1" class="imgs" >
+    <p class="hotel_name1">{{content.hotelName}}</p>
+    <div class="rating" appHoverHighlight>
+      <small class="small12">{{content.rating}}</small>
+      <small class="cost1">₹{{content.cost}} for one</small>
+    </div>
+    <p class="cuisine1">{{content.cuisine}}</p>
+  </a>
+  </div>
+
+</div>
+
+
+<!-- <div *ngIf="display">
+  <app-hotel-page [hNameFrombestFoods]="msgToChild"></app-hotel-page>
+
+</div>
+
+<br><br>
+
+
+
+
+
+{{foods[0].name}}
+
+
+<div class="image-container">
+  <div class="image-item" *ngFor="let content of foods" >
+
+    <img [src]="content.imageUrl" alt="Image 1" class="imgs">
+    <p class="hotel_name1">{{content.name}}</p>
+    <div class="rating">
+      <small class="small12">{{content.stars}}</small>
+      <small class="cost1">₹{{content.price}} for one</small>
+    </div>
+    <p class="cuisine1">{{content.origins}}</p>
+  </div>
+
+</div> -->
+
+
+
+<br>
+<br>
+<br>
+<!-- {{rawContent |json}}
+{{rawContent[0]|json}} -->
+
+
+{{foods[0]|json}}

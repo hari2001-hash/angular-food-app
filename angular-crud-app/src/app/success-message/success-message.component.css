@@ -1,0 +1,42 @@
+
+.table-container {
+  margin-left: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+thead {display: table-row-group;}
+
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    display: inline-block;
+  }
+}
+
+
+
+
+
+
+
+
+.itemImg{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100rem;
+  object-fit: cover;}

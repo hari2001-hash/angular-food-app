@@ -1,0 +1,105 @@
+.inspiration{
+  margin-left: 100px;
+}
+
+.items{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+}
+
+.chicken{
+  margin-left: 160px;
+}
+
+.paratha{
+  margin-left: 190px;
+}
+
+.burger{
+  margin-left: 180px;
+}
+.rolls{
+  margin-left: 190px;
+}
+.thali{
+  margin-left: 210px;
+}
+
+.biriyani p{
+  text-align: center;
+  justify-content: center;
+}
+
+
+.colwise{
+  display: grid;
+
+}
+
+.dish{
+  margin-left: 30px;
+}
+
+.flex{
+  display: flex;
+}
+
+
+
+
+
+li{
+  display: inline-block;
+}
+
+ul{
+  display: flex;
+  margin-left: 10px;
+}
+
+.brands{
+  margin-top: 80px;
+  margin-left: 90px;
+}
+
+.anna{
+  margin-left: -20px;
+}
+
+.anna_img{
+  border-radius: 50%;
+}
+
+.KFC{
+  margin-left: 40px;
+}
+.HB{
+  margin-left: 40px;
+  margin-top: -40px;
+}
+
+.ht{
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.bk{
+  margin-left: 30px;
+  margin-top: -5px;
+}
+
+
+
+
+
+
+
+
+
+.outer{
+  width: 100%;
+  overflow: auto;
+  margin-left: 100px;
+  display: inline-flex;
+}
